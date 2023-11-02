@@ -1,7 +1,5 @@
-import React from 'react';
-
 const Logo: React.FC = () => {
-  return <div>Gallery</div>;
+  return <span className="text-xl font-bold">Gallery</span>;
 };
 
 export default Logo;

@@ -93,23 +93,25 @@ const Gallery: React.FC = () => {
               onDragStart={(e) => handleDragStart(e, image)}
               onDragOver={handleDragOver}
               onDrop={(e) => handleDrop(e, image)}
-              className={`dragable-image rounded-md border h-full w-full relative ${
+              className={`dragable-image bg-white border rounded-md h-full w-full relative ${
                 image.featured &&
                 'row-start-1 col-start-1 col-end-3 lg:row-start-1 lg:col-start-1 lg:row-end-3 lg:col-end-3 md:row-start-1 md:col-start-1 md:row-end-3 md:col-end-3'
               }`}
             >
-              <img src={image.src} alt={image.alt} className="rounded-md" />
+              <div>
+                <img src={image.src} alt={image.alt} className="rounded-md" />
 
-              <div className="check-container">
-                <input
-                  type="checkbox"
-                  className="checkbox"
-                  onChange={() => handleCheckboxChange(image)}
-                  checked={image.selected}
-                />
+                <div className="check-container">
+                  <input
+                    type="checkbox"
+                    className="checkbox"
+                    onChange={() => handleCheckboxChange(image)}
+                    checked={image.selected}
+                  />
+                </div>
+
+                <div className="overlay"></div>
               </div>
-
-              <div className="overlay"></div>
             </div>
           ))}
         </div>
