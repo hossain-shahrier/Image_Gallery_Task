@@ -10,11 +10,11 @@ https://image-gallery-task-eight.vercel.app/
 
 ## Overview
 
-(https://github.com/hossain-shahrier/Image_Gallery_Task/blob/main/doc.png?raw=true)
+![Overview Image](https://github.com/hossain-shahrier/Image_Gallery_Task/blob/main/doc.png?raw=true)
 
 ## Tech Stack
 
-**Client:** React, Redux, TailwindCSS
+**Client:** React,TypeScript, Redux, TailwindCSS
 
 ## Features
 
