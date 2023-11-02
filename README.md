@@ -14,7 +14,7 @@ https://image-gallery-task-eight.vercel.app/
 
 ## Tech Stack
 
-**Client:** React, Redux, TailwindCSS
+**Client:** React,TypeScript, Redux, TailwindCSS
 
 ## Features
 
