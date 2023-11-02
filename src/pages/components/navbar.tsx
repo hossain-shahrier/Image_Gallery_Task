@@ -12,6 +12,7 @@ const Navbar: React.FC = () => {
     dispatch(deleteSelectedImages());
   };
 
+  // Get selected images count from Redux store
   const selectedImagesCount: number = useSelector(
     (state: any) => state.gallery.selectedImagesCount
   );
@@ -19,8 +20,13 @@ const Navbar: React.FC = () => {
   return (
     <header className="w-full mx-auto z-50 bg-blue-50 flex items-center top-0 fixed h-16 border border-b-2">
       <div className="px-6 flex w-full items-center justify-between">
+        {/* Logic for rendering seleted image/s count */}
         {selectedImagesCount > 0 ? (
-          <>{selectedImagesCount} files selected</>
+          <span className="text-gray-500 font-semibold">
+            {selectedImagesCount > 1
+              ? selectedImagesCount + ' files selected'
+              : selectedImagesCount + ' file selected'}
+          </span>
         ) : (
           <Logo />
         )}

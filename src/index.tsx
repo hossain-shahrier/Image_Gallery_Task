@@ -10,6 +10,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
+    {/* Wrapping React-Redux Provider */}
     <Provider store={store}>
       <App />
     </Provider>

@@ -1,10 +1,6 @@
-interface Image {
-  src: string;
-  id: number;
-  alt: string;
-  featured: boolean;
-}
+import { Image } from '../types';
 
+// Creating an array of images
 export const images: Image[] = [
   { src: '/images/image-1.webp', id: 1, alt: 'featured', featured: false },
   { src: '/images/image-2.webp', id: 2, alt: 'image', featured: false },

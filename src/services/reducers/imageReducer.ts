@@ -1,6 +1,7 @@
-// galleryReducer.ts
-
+// Types
 import { Action, GalleryState } from '../../types';
+
+// Constants
 import {
   DELETE_SELECTED_IMAGES,
   DESELECT_IMAGE,
@@ -8,16 +9,19 @@ import {
   IMAGE_GALLERY,
 } from '../constants/selectConstants';
 
+// Declaring initial state
 const initialState: GalleryState = {
   galleryImages: [],
   selectedImagesCount: 0,
 };
 
+// Reducer
 const galleryReducer = (
   state: GalleryState = initialState,
   { type, payload }: Action
 ): GalleryState => {
   switch (type) {
+    // Selecting image
     case SELECT_IMAGE:
       return {
         ...state,
@@ -27,6 +31,7 @@ const galleryReducer = (
         ),
       };
 
+    // Deselecting image
     case DESELECT_IMAGE:
       return {
         ...state,
@@ -36,6 +41,7 @@ const galleryReducer = (
         ),
       };
 
+    // Deleting selected images
     case DELETE_SELECTED_IMAGES:
       return {
         ...state,
@@ -43,6 +49,7 @@ const galleryReducer = (
         galleryImages: state.galleryImages.filter((image) => !image.selected),
       };
 
+    // Gallery images
     case IMAGE_GALLERY:
       return {
         ...state,
