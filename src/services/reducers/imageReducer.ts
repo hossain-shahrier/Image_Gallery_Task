@@ -7,6 +7,7 @@ import {
   DESELECT_IMAGE,
   SELECT_IMAGE,
   IMAGE_GALLERY,
+  RESET_SELECTED_IMAGES,
 } from '../constants/selectConstants';
 
 // Declaring initial state
@@ -40,7 +41,15 @@ const galleryReducer = (
           image.src === payload.src ? { ...image, selected: false } : image
         ),
       };
-
+    // Deselecting all images
+    case RESET_SELECTED_IMAGES:
+      return {
+        ...state,
+        selectedImagesCount: 0,
+        galleryImages: state.galleryImages.map((image) =>
+          image.selected ? { ...image, selected: false } : image
+        ),
+      };
     // Deleting selected images
     case DELETE_SELECTED_IMAGES:
       return {

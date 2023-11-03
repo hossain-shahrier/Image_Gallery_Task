@@ -55,8 +55,19 @@
   align-items: center;
 }
 
-.check-container input:checked ~ .checkbox {
-  background-color: #2196f3;
+.nav-checkbox {
+  display: flex;
+  gap: 10px;
+}
+.nav-checkbox input {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: rgba(81, 81, 81, 0.7);
+  opacity: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .checkbox:after {
